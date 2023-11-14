@@ -1,0 +1,45 @@
+import pyttsx3
+
+def say (text) :
+    engine.say(text)
+    print(text)
+    engine.runAndWait()
+
+engine = pyttsx3.init()
+say("Name: Jossel G. Redoquerio")
+say("Age: 18 years old")
+say("Address: Sitio Quarry Tagbac barangay San Jose Antipolo City, Rizal")
+
+import turtle
+
+pen=turtle.Turtle()
+turtle.title("For Sir Danilo")
+
+def curve():
+    for i in range(200):
+        pen.right(1)
+        pen.forward(1)
+                    
+def heart():
+    pen.fillcolor('Pink')
+    pen.begin_fill()
+    pen.left(140)
+    pen.forward(113)
+    curve()
+    pen.left(120)
+    curve()
+    pen.forward(112)
+    pen.end_fill()
+
+def text1():
+        pen.up()
+        pen.setpos(-76,95)
+        pen.down()
+        pen.color('black')
+        pen.write("Hope you like it Sir Danilo (๑ > ᴗ < ๑)")
+        
+    
+heart()
+text1()
+pen.ht()
+turtle.done()
